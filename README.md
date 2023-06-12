@@ -9,8 +9,11 @@
 ### Answer-
 
 The query builder in Laravel is a robust tool that gives developers the ability to connect with databases using a fluent and expressive API. It frees users from the necessity of writing raw SQL statements to construct and run database queries, making the process much simpler and more aesthetically pleasing. The query builder is one of the many tools that are included in the Laravel framework, which is a well-known PHP framework for the construction of web applications.
+
 Developers can carry out a wide variety of database operations with the help of the query builder. These operations include fetching records, inserting data, updating records, and deleting data. Because it is compatible with a variety of database management systems, including MySQL, PostgreSQL, SQLite, and SQL Server, it enables developers to work with the database technology that best suits their needs.
+
 Using the query builder provides several benefits, one of which is access to an expressive syntax. It offers a flexible interface that makes it possible for developers to chain methods and construct queries in a way that is both clear and easy to understand. Consider, for instance, the following snippet of code, which, when applied to a "users" database, retrieves all the users:
+
 ```php
 $users = DB::table('users')
             ->select('name', 'email')
@@ -18,10 +21,15 @@ $users = DB::table('users')
             ->orderBy('name', 'asc')
             ->get();
 ```
+
 In this demonstration, we begin by identifying the table (users) that will serve as the target of our query. After that, to filter and sort the data, we chain together the select, where, and orderBy methods. In the final step, we receive the results by executing the query and then calling the get method.
+
 The query builder also includes a broad variety of methods to make complicated inquiries, such as joins, subqueries, aggregate functions, and conditional clauses. Using these methods, I can retrieve the information I need from the database. It makes working with databases and writing code easy to maintain easier by providing a syntax that is user-friendly and straightforward for performing these tasks.
+
 The fact that the query builder has built-in support for parameter binding is another one of its many benefits. This function automatically cleans up user input to assist avoid SQL injection attacks, which can be very damaging. I can avoid immediately concatenating values into the query by making use of placeholders and then passing the values that correspond to those placeholders as distinct query parameters. The query builder will take care of appropriately escaping the values for I, ensuring that my database operations are carried out in a secure and trustworthy manner.
+
 In addition, the query builder has a seamless integration with other elements of Laravel, such as the Eloquent ORM (Object-Relational Mapping) and the Blade templating engine. Within the Laravel ecosystem, this enables developers to utilize the power of these technologies in tandem with the query builder, which enables efficient and flexible database interactions.
+
 In general, the query builder that comes packaged with Laravel offers a mechanism to interface with databases that is clear, easily readable, and safe. It makes working with databases easier and more pleasurable for developers by hiding the complexity of raw SQL behind a higher degree of abstraction and by abstracting away the complexities of SQL itself.
 
 ### Question - 2.Write the code to retrieve the "excerpt" and "description" columns from the "posts" table using Laravel's query builder. Store the result in the $posts variable. Print the $posts variable.
